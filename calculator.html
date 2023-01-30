@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 18px ridge  red;
+            overflow: auto;
+            width: fit-content;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 25px;
+            padding: 8px;
+        }
+        button
+        {
+            font-size: 95px;
+            background-color:black;
+            color:white;
+            outline: none;
+            margin: 4px;
+        padding: 4px;
+        border-radius: 25px;
+        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+        width: 100px;
+    
+        }
+        button:hover
+        {
+            background-color: yellow;
+            color: red;
+            transition: 1s;
+        }
+
+        input
+        {
+            width: 550px;
+            height: 46px;
+            margin: 8px;
+            border-radius: 20px;
+            border: 1px solid red;
+            caret-color: rgb(44, 29, 6);
+            font-size: 40px;
+            padding: 8px;
+        }
+        h1
+        {
+            text-align: center;
+            justify-content: center;
+            display: inline;
+            }
+            #cl
+            {
+                width: 170px;
+                background-color: peru;
+            }
+
+            #per{
+                width: 170px;
+                background-color: greenyellow;
+
+            }
+            #ad
+
+            {
+                background-color: darkorchid;
+                width: 170px;
+            }
+
+            #eq{
+         width: 195px;
+         background-color: springgreen;
+            }
+            </style>
+</head>
+<body>
+    
+    <div>
+        <h1>CALCULATOR</h1> <br><br>
+         <input type="text"  placeholder="inder..." id="res"><br>
+         <button class="box"  id="cl"  onclick="clearScreen()">   C</button>
+            <button class="box" id="per" onClick="display('%')">   %</button> 
+            <button class="box"  id="ad"  onClick="display('+')">  + </button> <br> <br>
+         <button class="box" onClick="display('9')">   9</button>
+    <button class="box" onClick="display('8')">   8</button>
+    <button class="box" onClick="display('7')">   7</button>
+    <button class="box" onClick="display('6')">   6</button> 
+    <button class="box" onClick="display('4')">   4</button> <br>
+    <button class="box" onClick="display('5')">  5 </button> 
+    <button class="box" onClick="display('3')">   3</button>
+    <button class="box" onClick="display('2')">   2</button> 
+    <button class="box" onClick="display('1')">   1</button> 
+    <button class="box" onClick="display('0 ')">   0</button>   <br>
+    <button class="box"  onClick="display('-')">   -</button>
+    <button class="box"  onClick="display('*')" >  *</button>
+    <button class="box"  onClick="display('/')">   /</button>
+     <button class="box"  id="eq" onClick="solve()">   =   </button> 
+    
+   
+   
+    
+    </div>
+    <script>
+
+        //display method
+        function display(val){
+
+document.getElementById('res').value += val
+
+return val
+
+}
+//Equation
+function solve(){
+
+let x = document.getElementById('res').value
+
+let y = eval(x);
+
+document.getElementById('res').value = y
+
+return y
+
+
+// all clear function
+}
+function clearScreen(){
+document.getElementById('res').value = ''
+}
+
+    </script>
+</body>
+</html>
